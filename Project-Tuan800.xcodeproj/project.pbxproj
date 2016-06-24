@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E6903E1D1D64DB00CA9476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6903D1D1D64DB00CA9476 /* main.m */; };
+		04E690411D1D64DB00CA9476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E690401D1D64DB00CA9476 /* AppDelegate.m */; };
+		04E690441D1D64DB00CA9476 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E690431D1D64DB00CA9476 /* ViewController.m */; };
+		04E690471D1D64DB00CA9476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E690451D1D64DB00CA9476 /* Main.storyboard */; };
+		04E690491D1D64DB00CA9476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E690481D1D64DB00CA9476 /* Assets.xcassets */; };
+		04E6904C1D1D64DB00CA9476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E6904A1D1D64DB00CA9476 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04E690391D1D64DB00CA9476 /* Project-Tuan800.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-Tuan800.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E6903D1D1D64DB00CA9476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04E6903F1D1D64DB00CA9476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04E690401D1D64DB00CA9476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04E690421D1D64DB00CA9476 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04E690431D1D64DB00CA9476 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04E690461D1D64DB00CA9476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04E690481D1D64DB00CA9476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04E6904B1D1D64DB00CA9476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04E6904D1D1D64DB00CA9476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04E690361D1D64DB00CA9476 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E690301D1D64DB00CA9476 = {
+			isa = PBXGroup;
+			children = (
+				04E6903B1D1D64DB00CA9476 /* Project-Tuan800 */,
+				04E6903A1D1D64DB00CA9476 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04E6903A1D1D64DB00CA9476 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04E690391D1D64DB00CA9476 /* Project-Tuan800.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04E6903B1D1D64DB00CA9476 /* Project-Tuan800 */ = {
+			isa = PBXGroup;
+			children = (
+				04E6903F1D1D64DB00CA9476 /* AppDelegate.h */,
+				04E690401D1D64DB00CA9476 /* AppDelegate.m */,
+				04E690421D1D64DB00CA9476 /* ViewController.h */,
+				04E690431D1D64DB00CA9476 /* ViewController.m */,
+				04E690451D1D64DB00CA9476 /* Main.storyboard */,
+				04E690481D1D64DB00CA9476 /* Assets.xcassets */,
+				04E6904A1D1D64DB00CA9476 /* LaunchScreen.storyboard */,
+				04E6904D1D1D64DB00CA9476 /* Info.plist */,
+				04E6903C1D1D64DB00CA9476 /* Supporting Files */,
+			);
+			path = "Project-Tuan800";
+			sourceTree = "<group>";
+		};
+		04E6903C1D1D64DB00CA9476 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04E6903D1D1D64DB00CA9476 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04E690381D1D64DB00CA9476 /* Project-Tuan800 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E690501D1D64DB00CA9476 /* Build configuration list for PBXNativeTarget "Project-Tuan800" */;
+			buildPhases = (
+				04E690351D1D64DB00CA9476 /* Sources */,
+				04E690361D1D64DB00CA9476 /* Frameworks */,
+				04E690371D1D64DB00CA9476 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project-Tuan800";
+			productName = "Project-Tuan800";
+			productReference = 04E690391D1D64DB00CA9476 /* Project-Tuan800.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04E690311D1D64DB00CA9476 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = mac;
+				TargetAttributes = {
+					04E690381D1D64DB00CA9476 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PA2TCZY4K4;
+					};
+				};
+			};
+			buildConfigurationList = 04E690341D1D64DB00CA9476 /* Build configuration list for PBXProject "Project-Tuan800" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04E690301D1D64DB00CA9476;
+			productRefGroup = 04E6903A1D1D64DB00CA9476 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04E690381D1D64DB00CA9476 /* Project-Tuan800 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04E690371D1D64DB00CA9476 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E6904C1D1D64DB00CA9476 /* LaunchScreen.storyboard in Resources */,
+				04E690491D1D64DB00CA9476 /* Assets.xcassets in Resources */,
+				04E690471D1D64DB00CA9476 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E690351D1D64DB00CA9476 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E690441D1D64DB00CA9476 /* ViewController.m in Sources */,
+				04E690411D1D64DB00CA9476 /* AppDelegate.m in Sources */,
+				04E6903E1D1D64DB00CA9476 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04E690451D1D64DB00CA9476 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E690461D1D64DB00CA9476 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04E6904A1D1D64DB00CA9476 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E6904B1D1D64DB00CA9476 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04E6904E1D1D64DB00CA9476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04E6904F1D1D64DB00CA9476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04E690511D1D64DB00CA9476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Project-Tuan800/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.Project-Tuan800";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04E690521D1D64DB00CA9476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Project-Tuan800/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.Project-Tuan800";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04E690341D1D64DB00CA9476 /* Build configuration list for PBXProject "Project-Tuan800" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E6904E1D1D64DB00CA9476 /* Debug */,
+				04E6904F1D1D64DB00CA9476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E690501D1D64DB00CA9476 /* Build configuration list for PBXNativeTarget "Project-Tuan800" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E690511D1D64DB00CA9476 /* Debug */,
+				04E690521D1D64DB00CA9476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04E690311D1D64DB00CA9476 /* Project object */;
+}
