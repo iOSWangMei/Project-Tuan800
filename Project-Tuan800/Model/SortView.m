@@ -5,6 +5,7 @@
 //  Created by mac on 16/7/4.
 //  Copyright © 2016年 mac. All rights reserved.
 //
+
 #define SCREEN_WIDTH [[UIScreen mainScreen]bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen]bounds].size.height
 
@@ -20,11 +21,14 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        [self createTopView];
-        
-        [self createBottomView];
-    }
+#pragma mark - 创建底部视图
+            UIView *bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, frame.size.height-50, SCREEN_WIDTH, 50)];
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+            imageView.image = [UIImage imageNamed:@"v6_category_filter_bottom"];
+            [bottomView addSubview:imageView];
+            
+            [self addSubview:bottomView];
+        }
     return self;
 }
 
@@ -65,18 +69,6 @@
 }
 
 
-#pragma mark - 创建底部视图
--(void)createBottomView
-{
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/2+71-50, SCREEN_WIDTH, 50)];
-    //    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-    imageView.image = [UIImage imageNamed:@"v6_category_filter_bottom"];
-    [view addSubview:imageView];
-    
-    [view addSubview:view];
-}
 
 //    //[view addSubview:view];
 //    [view bringSubviewToFront:view];
