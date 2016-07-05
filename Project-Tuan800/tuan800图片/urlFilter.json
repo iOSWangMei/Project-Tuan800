@@ -1,0 +1,15 @@
+{
+    "sites":[
+             {
+             "siteName": "taobao",
+             "enableLocalAppControl": 0,
+             "appScheme":["itaobao://"],
+             "downloadAppControl":2,
+             "appDownloadUrl":["http://itunes.apple.com/cn/app/id387682726?mt=8"],
+             "selfDownloadUrl":"http://m.zhe800.com/hd/tbtx",
+             "enableLocalStrategy":1,
+             "scheParams":[{"sche":"tuan800tgdq://wapcallback"}],
+             "scripts":"var __qjk33a=document.getElementById('smartAd');__qjk33a.style.display='none';document.body.removeChild(__qjk33a);setTimeout(\"document.getElementById('smartAd').style.display='none'\", 100);"
+             }
+             ]
+}
