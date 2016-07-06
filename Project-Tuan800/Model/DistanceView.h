@@ -1,5 +1,5 @@
 //
-//  SortViewController.h
+//  DistanceViewController.h
 //  Project-Tuan800
 //
 //  Created by mac on 16/7/4.
@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SortView : UIView
+@interface DistanceView : UIView
 
 @property (nonatomic,strong)UIView *topView;
+@property(nonatomic,strong)NSMutableArray *leftArray;
+@property(nonatomic,strong)UIView *rightView;
+@property(nonatomic,strong)UITableViewCell *cell;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 

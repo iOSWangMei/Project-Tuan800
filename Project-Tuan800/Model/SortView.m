@@ -6,9 +6,6 @@
 //  Copyright © 2016年 mac. All rights reserved.
 //
 
-#define SCREEN_WIDTH [[UIScreen mainScreen]bounds].size.width
-#define SCREEN_HEIGHT [[UIScreen mainScreen]bounds].size.height
-
 #import "SortView.h"
 
 @interface SortView ()
@@ -21,60 +18,49 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+ #pragma mark - 创建顶部视图
+        self.topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height/2-50)];
+        self.topView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:self.topView];
+        
+        
 #pragma mark - 创建底部视图
-            UIView *bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, frame.size.height-50, SCREEN_WIDTH, 50)];
-            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-            imageView.image = [UIImage imageNamed:@"v6_category_filter_bottom"];
-            [bottomView addSubview:imageView];
-            
-            [self addSubview:bottomView];
-        }
+        UIView *bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height/2-50, self.frame.size.width, 50)];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 50)];
+        imageView.image = [UIImage imageNamed:@"v6_category_filter_bottom"];
+        [bottomView addSubview:imageView];
+        
+        [self addSubview:bottomView];
+        
+        
+#pragma mark - 创建下部视图
+        UIView *footView = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/2)];
+        
+        footView.backgroundColor = [UIColor blackColor];
+        footView.alpha = 0.1;
+        
+        [self addSubview:footView];
+        
+        
+        /*
+#pragma mark - 毛玻璃效果
+        //1,效果对象
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+        
+        //2,创建一个用于显示效果的view
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:effect];
+        
+        effectView.alpha = 0.3;
+        effectView.frame = CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/2);
+        
+        [self addSubview:effectView];
+        */
+    }
+    
     return self;
 }
 
-
-#pragma mark - 创建view
--(void)createTopView
-{
-//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 71, SCREEN_WIDTH, SCREEN_HEIGHT/2)];
-//    view.backgroundColor = [UIColor yellowColor];
-//    [view addSubview:view];
-    
-    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:@"默认排序",@"离我最近",@"销量最高",@"价格最低",@"价格最高", nil];
-    
-    float rowSpace = 20;
-    float buttonWidth = 100;
-    float buttonHeight = 30;
-    
-    for (int i = 0; i < 5; i ++) {
-        
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.center = CGPointMake(SCREEN_WIDTH/2, rowSpace+(buttonHeight/2)+(rowSpace+buttonHeight)*i);
-        button.bounds = CGRectMake(0, 0, buttonWidth, buttonHeight);
-        
-        [button setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        
-        [button setBackgroundImage:[UIImage imageNamed:@"v6_category_filterbar_selected_cell2"] forState:UIControlStateSelected];
-        [button setTitle:[array objectAtIndex:i] forState:UIControlStateSelected];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        
-        [button addTarget:self action:@selector(orderViewButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    }
-}
-#pragma mark - 点击button,对tableView进行排序
--(void)orderViewButtonAction:(UIButton *)sender
-{
-    
-}
-
-
-
-//    //[view addSubview:view];
-//    [view bringSubviewToFront:view];
-//
-//    //[view removeFromSuperview];
-//    [view bringSubviewToFront:view];
 
 
 @end

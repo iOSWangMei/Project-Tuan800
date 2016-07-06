@@ -13,8 +13,8 @@
 #import "FilterViewController.h"
 #import "YDataModels.h"
 #import "CustomCell.h"
-#import "DistanceViewController.h"
-#import "SortViewController.h"
+#import "DistanceView.h"
+#import "SortView.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface NearViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -30,6 +30,8 @@
     NSMutableArray *_addressArray;
     
     BOOL _btnIsRed;
+    DistanceView *_distanceView;
+    SortView *_sortView;
 }
 @property (nonatomic,strong)NSMutableArray *dataArray;
 
@@ -318,11 +320,70 @@
 {
     
 }
+
 #pragma mark - 弹出距离视图
--(void)createDistanceView
+-(DistanceView *)createDistanceView
+{
+    DistanceView *distanceView = [[DistanceView alloc]initWithFrame:CGRectMake(0, 71, SCREEN_WIDTH, SCREEN_HEIGHT-71)];
+    distanceView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:distanceView];
+    
+    distanceView.leftArray = [[NSMutableArray alloc]initWithObjects:@"附近",@"全郑州",@"金水区",@"二七区",@"中原区",@"近郊",@"管城区",@"上街区",@"惠济区",@"郑东新区", nil];
+    
+    float rightRowSpace = 10;
+    float rightButtonWidth = 100;
+    float rightButtonHeight = 30;
+
+
+    NSMutableArray *rightArray = [[NSMutableArray alloc]initWithObjects:@"0.5km",@"1km",@"2km",@"3km",@"5km",@"10km", nil];
+    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:@"所有区域",@"所有商圈", nil];
+    
+    for (int i = 0; i < 5; i ++) {
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        if (distanceView.cell.textLabel.text == [distanceView.leftArray objectAtIndex:0]) {
+            
+            rightButton.center = CGPointMake(distanceView.frame.size.width/2+100, rightRowSpace+(rightButtonHeight/2)+(rightRowSpace+rightButtonHeight)*i);
+            [rightButton setTitle:[rightArray objectAtIndex:i] forState:UIControlStateNormal];
+            [rightButton setTitle:[rightArray objectAtIndex:i] forState:UIControlStateSelected];
+            
+        }else if (distanceView.cell.textLabel.text == [distanceView.leftArray objectAtIndex:1]) {
+            
+            rightButton.center = CGPointMake(distanceView.frame.size.width/2+100, rightRowSpace+(rightButtonHeight/2));
+            [rightButton setTitle:@"所有区域" forState:UIControlStateNormal];
+            [rightButton setTitle:@"所有区域" forState:UIControlStateSelected];
+        }else{
+            
+            rightButton.center = CGPointMake(distanceView.frame.size.width/2+100, rightRowSpace+(rightButtonHeight/2));
+            [rightButton setTitle:@"所有商圈" forState:UIControlStateNormal];
+            [rightButton setTitle:@"所有商圈" forState:UIControlStateSelected];
+        }
+
+        rightButton.bounds = CGRectMake(0, 0, rightButtonWidth, rightButtonHeight);
+        
+        [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        [rightButton setBackgroundImage:[UIImage imageNamed:@"v6_category_filterbar_selected_cell2"] forState:UIControlStateSelected];
+        
+        [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        
+        [rightButton addTarget:self action:@selector(distanceViewButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [distanceView.rightView addSubview:rightButton];
+    }
+
+    return distanceView;
+}
+#pragma mark - 点击button,对tableView进行排序
+-(void)distanceViewButtonAction:(UIButton *)sender
 {
     
 }
+//    //[view addSubview:view];
+//    [view bringSubviewToFront:view];
+//
+//    //[view removeFromSuperview];
+//    [view bringSubviewToFront:view];
+
 #pragma mark - 距离button点击
 -(void)distanceBtnAction:(UIButton *)sender
 {
@@ -334,17 +395,58 @@
         [sender setImage:[UIImage imageNamed:@"v6_category_filterbar_arrow_up"] forState:UIControlStateNormal];
         [sender setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         
-        DistanceViewController *distanceVC = [[DistanceViewController alloc]init];
-        [self presentViewController:distanceVC animated:YES completion:nil];
+        if (!_distanceView) {
+            
+            _distanceView = [self createDistanceView];
+            [self.view addSubview:_distanceView];
+        }
     }else{
         
         [sender setImage:[UIImage imageNamed:@"v6_category_filterbar_arrow_down"] forState:UIControlStateNormal];
         [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        [_distanceView removeFromSuperview];
+       
     }
 }
 
 
+#pragma mark - 弹出默认排序视图
+-(SortView *)createSortView
+{
+    SortView *sortView = [[SortView alloc]initWithFrame:CGRectMake(0, 71, SCREEN_WIDTH, SCREEN_HEIGHT-71)];
+    sortView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:sortView];
+    
+    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:@"默认排序",@"离我最近",@"销量最高",@"价格最低",@"价格最高", nil];
+    
+    float rowSpace = 20;
+    float buttonWidth = 100;
+    float buttonHeight = 30;
+    
+    for (int i = 0; i < 5; i ++) {
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.center = CGPointMake(SCREEN_WIDTH/2, rowSpace+(buttonHeight/2)+(rowSpace+buttonHeight)*i);
+        button.bounds = CGRectMake(0, 0, buttonWidth, buttonHeight);
+        
+        [button setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        [button setBackgroundImage:[UIImage imageNamed:@"v6_category_filterbar_selected_cell2"] forState:UIControlStateSelected];
+        [button setTitle:[array objectAtIndex:i] forState:UIControlStateSelected];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        
+        [button addTarget:self action:@selector(orderViewButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [sortView.topView addSubview:button];
+    }
+    return sortView;
+}
+#pragma mark - 点击button,对tableView进行排序
+-(void)orderViewButtonAction:(UIButton *)sender
+{
+    
+}
 #pragma mark - 默认排序button点击
 -(void)orderBtnAction:(UIButton *)sender
 {
@@ -356,15 +458,19 @@
         [sender setImage:[UIImage imageNamed:@"v6_category_filterbar_arrow_up"] forState:UIControlStateNormal];
         [sender setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         
-        SortViewController *sortVC = [[SortViewController alloc]init];
-        [self presentViewController:sortVC animated:YES completion:nil];
-        
-        }else{
+        if (!_sortView) {
             
+            _sortView = [self createSortView];
+            [self.view addSubview:_sortView];
+        }
+        
+    }else{
+        
         [sender setImage:[UIImage imageNamed:@"v6_category_filterbar_arrow_down"] forState:UIControlStateNormal];
         [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        [_sortView removeFromSuperview];
+        
     }
 }
 

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="117"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHL-VI-pyZ">
-                                        <rect key="frame" x="36" y="54" width="110" height="35"/>
+                                        <rect key="frame" x="20" y="50" width="160" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="      看附近" image="home_001">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,8 +33,12 @@
                                             <action selector="lookNearClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q3y-58-6NI"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHY-ZJ-eJM">
+                                        <rect key="frame" x="207" y="60" width="1" height="15"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUn-jX-ruK">
-                                        <rect key="frame" x="251" y="54" width="110" height="35"/>
+                                        <rect key="frame" x="234" y="50" width="160" height="35"/>
                                         <state key="normal" title="      找分类" image="home_002">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -66,7 +70,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="249" y="-751"/>
+            <point key="canvasLocation" x="168" y="-734"/>
         </scene>
     </scenes>
     <resources>

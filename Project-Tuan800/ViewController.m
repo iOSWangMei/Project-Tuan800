@@ -100,8 +100,11 @@
 //    searchButton.backgroundColor = [UIColor redColor];
     
     [searchButton setImage:[UIImage imageNamed:@"v6_common_search"] forState:UIControlStateNormal];
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 5, 0, 0);
     
-    [searchButton setTitle:@"   寻找团购,店铺,地点" forState:UIControlStateNormal];
+    [searchButton setTitle:@"寻找团购,店铺,地点" forState:UIControlStateNormal];
+    [searchButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
+    
     searchButton.titleLabel.textAlignment = NSTextAlignmentLeft;
     searchButton.titleLabel.font = [UIFont systemFontOfSize:15];
     [searchButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];

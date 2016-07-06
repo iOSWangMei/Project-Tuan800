@@ -10,7 +10,6 @@
 		046CE2BC1D26A08A00D31D01 /* XBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE2B91D26A08A00D31D01 /* XBaseDataModel.m */; };
 		046CE2BD1D26A08A00D31D01 /* XCities.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE2BB1D26A08A00D31D01 /* XCities.m */; };
 		0472524B1D2AAC4100EB4699 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0472524A1D2AAC4100EB4699 /* CoreLocation.framework */; };
-		0472524D1D2AACB100EB4699 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0472524C1D2AACB100EB4699 /* CoreLocation.framework */; };
 		0488059B1D226A3200D8127B /* FlipViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488059A1D226A3200D8127B /* FlipViewTool.m */; };
 		048B52E31D28AC830074E8CA /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B52E11D28AC830074E8CA /* FilterViewController.m */; };
 		048B52E41D28AC830074E8CA /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048B52E21D28AC830074E8CA /* FilterViewController.xib */; };
@@ -24,8 +23,7 @@
 		048B53181D2917D00074E8CA /* YTagdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B53101D2917D00074E8CA /* YTagdata.m */; };
 		048B531C1D29526B0074E8CA /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B531A1D29526B0074E8CA /* CustomCell.m */; };
 		048B531D1D29526B0074E8CA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048B531B1D29526B0074E8CA /* CustomCell.xib */; };
-		048C4D461D2A681A001643DA /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C4D441D2A681A001643DA /* DistanceViewController.m */; };
-		048C4D471D2A681A001643DA /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C4D451D2A681A001643DA /* DistanceViewController.xib */; };
+		048C4D461D2A681A001643DA /* DistanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C4D441D2A681A001643DA /* DistanceView.m */; };
 		048C4D4C1D2A689A001643DA /* SortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C4D4A1D2A689A001643DA /* SortView.m */; };
 		049939901D1E688B00F09329 /* ZYBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499398D1D1E688B00F09329 /* ZYBanner.m */; };
 		049939911D1E688B00F09329 /* ZYBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499398F1D1E688B00F09329 /* ZYBaseModel.m */; };
@@ -1222,7 +1220,6 @@
 		046CE2BA1D26A08A00D31D01 /* XCities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCities.h; sourceTree = "<group>"; };
 		046CE2BB1D26A08A00D31D01 /* XCities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCities.m; sourceTree = "<group>"; };
 		0472524A1D2AAC4100EB4699 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0472524C1D2AACB100EB4699 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreLocation.framework; sourceTree = "<group>"; };
 		048805991D226A3200D8127B /* FlipViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewTool.h; sourceTree = "<group>"; };
 		0488059A1D226A3200D8127B /* FlipViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewTool.m; sourceTree = "<group>"; };
 		048B52E01D28AC830074E8CA /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
@@ -1248,9 +1245,8 @@
 		048B53191D29526B0074E8CA /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		048B531A1D29526B0074E8CA /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		048B531B1D29526B0074E8CA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		048C4D431D2A6819001643DA /* DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
-		048C4D441D2A681A001643DA /* DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
-		048C4D451D2A681A001643DA /* DistanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
+		048C4D431D2A6819001643DA /* DistanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceView.h; sourceTree = "<group>"; };
+		048C4D441D2A681A001643DA /* DistanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceView.m; sourceTree = "<group>"; };
 		048C4D491D2A689A001643DA /* SortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortView.h; sourceTree = "<group>"; };
 		048C4D4A1D2A689A001643DA /* SortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortView.m; sourceTree = "<group>"; };
 		0499398B1D1E688B00F09329 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
@@ -2497,7 +2493,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0472524D1D2AACB100EB4699 /* CoreLocation.framework in Frameworks */,
 				0472524B1D2AAC4100EB4699 /* CoreLocation.framework in Frameworks */,
 				B699858D3158B2F3D012F5F7 /* libPods-Project-Tuan800.a in Frameworks */,
 			);
@@ -2576,9 +2571,8 @@
 		048C4D421D2A67A3001643DA /* Distance */ = {
 			isa = PBXGroup;
 			children = (
-				048C4D431D2A6819001643DA /* DistanceViewController.h */,
-				048C4D441D2A681A001643DA /* DistanceViewController.m */,
-				048C4D451D2A681A001643DA /* DistanceViewController.xib */,
+				048C4D431D2A6819001643DA /* DistanceView.h */,
+				048C4D441D2A681A001643DA /* DistanceView.m */,
 			);
 			name = Distance;
 			sourceTree = "<group>";
@@ -4065,7 +4059,6 @@
 		04E690301D1D64DB00CA9476 = {
 			isa = PBXGroup;
 			children = (
-				0472524C1D2AACB100EB4699 /* CoreLocation.framework */,
 				04E6903B1D1D64DB00CA9476 /* Project-Tuan800 */,
 				04E6903A1D1D64DB00CA9476 /* Products */,
 				26C840C57EA2F464877C1DC7 /* Pods */,
@@ -4433,7 +4426,6 @@
 				04B54F2B1D24186F00993F8A /* s5.png in Resources */,
 				04B5510A1D24186F00993F8A /* v6_favorite_confirm_selected@2x.png in Resources */,
 				04B54F4F1D24186F00993F8A /* TBBBindPhoneNumber.storyboardc in Resources */,
-				048C4D471D2A681A001643DA /* DistanceViewController.xib in Resources */,
 				04B552C51D24186F00993F8A /* v6_zhe800_deal_l_integral.png in Resources */,
 				04B551AF1D24186F00993F8A /* v6_order_detail_tel_hi.png in Resources */,
 				04B54F711D24186F00993F8A /* TBBScoreOrderViewCTL.storyboardc in Resources */,
@@ -5428,7 +5420,7 @@
 				048B53151D2917D00074E8CA /* YShops.m in Sources */,
 				049939BC1D1E70D100F09329 /* UIImageView+WebCache.m in Sources */,
 				04E690411D1D64DB00CA9476 /* AppDelegate.m in Sources */,
-				048C4D461D2A681A001643DA /* DistanceViewController.m in Sources */,
+				048C4D461D2A681A001643DA /* DistanceView.m in Sources */,
 				04F94DC91D21240500392F9F /* FavorViewController.m in Sources */,
 				048B531C1D29526B0074E8CA /* CustomCell.m in Sources */,
 				048B53111D2917D00074E8CA /* YBaseAllData.m in Sources */,
